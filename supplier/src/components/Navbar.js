@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {LinkContainer} from 'react-router-bootstrap';
 
 function NavScrollExample() {
   return (
@@ -17,8 +18,12 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Products</Nav.Link>
+            <LinkContainer to ="/">
+            <Nav.Link >Home</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to ="/products">
+            <Nav.Link>Products</Nav.Link>
+            </LinkContainer>
             <NavDropdown title="Reports" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Reports</NavDropdown.Item>
               <NavDropdown.Item href="#action4">
@@ -29,12 +34,21 @@ function NavScrollExample() {
                 Something else here
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#Sign Up" >
+            <LinkContainer to ="/signup" >
+            <Nav.Link >
               Sign Up
             </Nav.Link>
-            <Nav.Link href="#Log In" >
+            </LinkContainer>
+            <LinkContainer to="/login">
+              <Nav.Link>
              Login
             </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/connect">
+              <Nav.Link>
+             Connect
+            </Nav.Link>
+            </LinkContainer>
           </Nav>
           <Form className="d-flex">
             <Form.Control
