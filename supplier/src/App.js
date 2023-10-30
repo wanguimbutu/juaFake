@@ -10,6 +10,9 @@ import Metamask from "./components/Metamask";
 //import { Container,Col, Row } from "react-bootstrap";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Qrscan from "./components/Qrscan";
+
+
 
 export default function App (){
   return(
@@ -27,6 +30,7 @@ export default function App (){
        <Route exact path="/signup" Component={SignUp}></Route>
        <Route exact path="/login" Component={Login}></Route>
        <Route exact path="/connect" Component={Metamask}></Route>
+       <Route exact path="/qrscan" Component={Qrscan}></Route>
         </Routes>
 
       
