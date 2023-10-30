@@ -3,7 +3,7 @@ import './Products.css'
 function Products(){
     const navigate =useNavigate()
     const handleScan=()=>{
-        navigate('/scan')
+        navigate('/qrscan')
     }
     return(
         <div className="container">
